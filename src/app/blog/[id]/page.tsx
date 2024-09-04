@@ -5,6 +5,8 @@ import { MDHtml, Container } from 'common'
 
 import BlogHeader from './components/Header'
 
+import styled from './styles.module.scss'
+
 export default async function BlogItem({
   params
 }: {
@@ -18,7 +20,7 @@ export default async function BlogItem({
 
   return (
     <main>
-      <article>
+      <article className={styled['blog-container']}>
         <Container>
           <BlogHeader tags={tags.data} postInfo={rest} />
           <MDHtml content={post} />

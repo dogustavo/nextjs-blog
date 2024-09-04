@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Work_Sans, Fugaz_One } from 'next/font/google'
 import './globals.scss'
 
+import { Navigator } from 'common'
+
 const fugaz_one = Fugaz_One({
   subsets: ['latin'],
   weight: '400',
@@ -29,7 +31,10 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${work_sans.variable} ${fugaz_one.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Navigator />
+        {children}
+      </body>
     </html>
   )
 }

@@ -26,12 +26,12 @@ body.theme-light {
 html,
 body {
   font-family: var(--font-work-sans);
-
   scroll-behavior: smooth;
   min-height: 100%;
   position: relative;
   font-size: 16px;
   margin: 0;
+  transition: background 0.4s ease;
 }
 
 body {
