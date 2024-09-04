@@ -1,0 +1,44 @@
+.post-header {
+  .tag-wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(22);
+    margin-bottom: rem(20);
+
+    a {
+      color: var(--color-primary);
+      font-style: italic;
+    }
+  }
+
+  h1 {
+    color: var(--color-text);
+    font-size: $title-large;
+  }
+
+  .created-at,
+  .sumary-wrapper {
+    color: var(--color-text);
+  }
+
+  .created-by {
+    color: var(--color-primary);
+  }
+
+  .created-at {
+    margin-top: 8px;
+  }
+
+  .sumary-wrapper {
+    margin: rem(26) 0;
+
+    > p {
+      font-weight: 300;
+    }
+  }
+}
+
+.section-divider {
+  border-color: #404756;
+  margin: rem(32) 0;
+}

@@ -1,0 +1,75 @@
+:root {
+  --color-text: #{theme-color(dark, text)};
+  --color-background: #{theme-color(dark, background)};
+  --color-primary: #{theme-color(dark, primary)};
+  --color-secondary: #{theme-color(dark, secondary)};
+  --color-accent: #{theme-color(dark, accent)};
+}
+
+body.theme-light {
+  --color-text: #{theme-color(light, text)};
+  --color-background: #{theme-color(light, background)};
+  --color-primary: #{theme-color(light, primary)};
+  --color-secondary: #{theme-color(light, secondary)};
+  --color-accent: #{theme-color(light, accent)};
+}
+
+*,
+*::before,
+*::after {
+  outline: 0;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  font-family: var(--font-work-sans);
+
+  scroll-behavior: smooth;
+  min-height: 100%;
+  position: relative;
+  font-size: 16px;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-background);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  transition: font-size 0.4s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+a,
+button {
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+button {
+  all: unset;
+}
