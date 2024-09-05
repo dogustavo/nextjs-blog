@@ -1,9 +1,12 @@
 'use client'
-
-import Link from 'next/link'
-import styled from './styles.module.scss'
+import { useContext } from 'react'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import Image from 'next/image'
+
+import { ThemeContext } from 'context/theme'
+
+import styled from './styles.module.scss'
 
 const menuItems = [
   {
@@ -31,13 +34,14 @@ const menuItems = [
 export default function Menu() {
   const pathname = usePathname()
 
+  const { toogleTheme } = useContext(ThemeContext)
+
   const checkActivePage = (page: string): boolean => {
     if (!pathname) {
       return false
     }
 
     const path = pathname.split('/')[1]
-
     return path === page
   }
 
@@ -59,7 +63,7 @@ export default function Menu() {
         <button
           className={styled['button-theme']}
           type="button"
-          onClick={() => console.log('Click')}
+          onClick={toogleTheme}
         >
           <Image
             alt="Imagem trocar de tema"

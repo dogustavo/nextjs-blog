@@ -6,7 +6,7 @@
   --color-accent: #{theme-color(dark, accent)};
 }
 
-body.theme-light {
+body[data-theme='light'] {
   --color-text: #{theme-color(light, text)};
   --color-background: #{theme-color(light, background)};
   --color-primary: #{theme-color(light, primary)};
@@ -31,7 +31,10 @@ body {
   position: relative;
   font-size: 16px;
   margin: 0;
-  transition: background 0.4s ease;
+
+  transition-property: color, background;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 body {

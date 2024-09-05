@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import { Work_Sans, Fugaz_One } from 'next/font/google'
 import './globals.scss'
-
+import { cookies } from 'next/headers'
 import { Navigator } from 'common'
+
+import ThemeProvider from 'provider/theme'
 
 const fugaz_one = Fugaz_One({
   subsets: ['latin'],
@@ -26,15 +28,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const theme = cookies().get('theme-color')?.value || 'dark'
+
   return (
     <html
       lang="pt-BR"
       className={`${work_sans.variable} ${fugaz_one.variable}`}
     >
-      <body>
-        <Navigator />
-        {children}
-      </body>
+      <ThemeProvider cookieTheme={theme}>
+        <body data-theme={theme}>
+          <Navigator />
+          {children}
+        </body>
+      </ThemeProvider>
     </html>
   )
 }
