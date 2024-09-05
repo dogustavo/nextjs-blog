@@ -1,4 +1,8 @@
 .post-header {
+  padding-bottom: rem(24);
+  margin-bottom: rem(42);
+  border-bottom: 1px solid #404756;
+
   .tag-wrapper {
     display: flex;
     align-items: center;
@@ -36,9 +40,4 @@
       font-weight: 300;
     }
   }
-}
-
-.section-divider {
-  border-color: #404756;
-  margin: rem(32) 0;
 }

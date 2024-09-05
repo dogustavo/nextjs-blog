@@ -57,7 +57,6 @@ export default async function BlogHeader({
           <p>{postInfo.summary}</p>
         </div>
       </header>
-      <hr className={styled['section-divider']} />
     </>
   )
 }

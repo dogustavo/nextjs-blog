@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Work_Sans, Fugaz_One } from 'next/font/google'
 import './globals.scss'
 import { cookies } from 'next/headers'
-import { Navigator } from 'common'
+import { Navigator, Footer } from 'common'
 
 import ThemeProvider from 'provider/theme'
 
@@ -39,6 +39,8 @@ export default function RootLayout({
         <body data-theme={theme}>
           <Navigator />
           {children}
+
+          <Footer />
         </body>
       </ThemeProvider>
     </html>

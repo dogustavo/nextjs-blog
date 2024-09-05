@@ -34,7 +34,7 @@ const menuItems = [
 export default function Menu() {
   const pathname = usePathname()
 
-  const { toogleTheme } = useContext(ThemeContext)
+  const { toogleTheme, theme } = useContext(ThemeContext)
 
   const checkActivePage = (page: string): boolean => {
     if (!pathname) {
@@ -66,8 +66,8 @@ export default function Menu() {
           onClick={toogleTheme}
         >
           <Image
-            alt="Imagem trocar de tema"
-            src="/static/light_mode.svg"
+            alt={`Icone no centro do botão que representa a troca para o tema ${theme}`}
+            src={`/static/${theme}_mode.svg`}
             width={28}
             height={28}
           />

@@ -1,11 +1,5 @@
 'use client'
-import { useContext } from 'react'
-import ThemeProvider, { ThemeContext } from 'context/theme'
-
-// const Wrapper = ({ children }: { children: React.ReactNode }) => {
-//   const { theme } = useContext(ThemeContext)
-//   return
-// }
+import ThemeProvider from 'context/theme'
 
 export default function ProviderTheme({
   children,

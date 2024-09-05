@@ -1,0 +1,17 @@
+.footer-wrapper {
+  .footer-container {
+    padding: rem(28) 0;
+
+    border-top: 1px solid #404756;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-text);
+
+    a {
+      color: var(--color-primary);
+    }
+  }
+}

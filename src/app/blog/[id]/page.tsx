@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getPostById } from 'services'
 
-import { MDHtml, Container } from 'common'
+import { MDHtml, Container, Breadcrumb } from 'common'
 
 import BlogHeader from './components/Header'
 
@@ -22,6 +22,22 @@ export default async function BlogItem({
     <main>
       <article className={styled['blog-container']}>
         <Container>
+          <Breadcrumb
+            breadcrumbs={[
+              {
+                path: '/',
+                name: 'Home'
+              },
+              {
+                path: '/blog',
+                name: 'Blog'
+              },
+              {
+                path: `/blog/${params.id}`,
+                name: rest.title
+              }
+            ]}
+          />
           <BlogHeader tags={tags.data} postInfo={rest} />
           <MDHtml content={post} />
         </Container>

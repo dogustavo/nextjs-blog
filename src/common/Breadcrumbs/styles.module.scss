@@ -1,0 +1,64 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(50);
+
+  li {
+    display: flex;
+
+    &:not(:first-child) {
+      &::before {
+        content: '/';
+        margin: 0 8px;
+        color: var(--color-text);
+      }
+    }
+  }
+
+  span,
+  a {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1rem;
+    font-weight: 400;
+    color: var(--color-text);
+    text-wrap: nowrap;
+  }
+
+  span {
+    font-weight: 500;
+    color: var(--color-primary);
+  }
+
+  span {
+    &:last-child {
+      width: rem(180);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+
+      &::after {
+        content: '...';
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-small) {
+  .breadcrumb {
+    li {
+      display: flex;
+    }
+
+    span {
+      &:last-child {
+        width: 100%;
+
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
