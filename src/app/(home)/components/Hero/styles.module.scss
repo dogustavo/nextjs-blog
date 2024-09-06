@@ -4,49 +4,21 @@
 
   .hero-wrapper {
     display: grid;
-    grid-template-columns: 35% auto;
-    gap: rem(80);
+    grid-template-columns: unset;
+    grid-template-rows: auto auto;
+    gap: rem(40);
   }
 
-  .hero-info-wrapper {
-    p {
-      font-size: $text-large;
-      font-weight: 400;
-      margin-bottom: rem(40);
-      margin-top: 6px;
-    }
+  .card-image {
+    position: relative;
+    width: rem(195);
+    height: rem(195);
+    overflow: hidden;
 
-    li {
-      margin: 6px 0;
-    }
-
-    span {
-      font-size: 14px;
-      font-weight: 300;
-    }
-  }
-
-  .hero-title {
-    display: flex;
-    width: 100%;
-
-    h1,
-    span {
-      font-size: rem(84);
-      line-height: rem(52);
-    }
-
-    h1 {
-      line-height: rem(84);
-      width: rem(500);
-      font-family: var(--font-fugaz-one);
-      background: linear-gradient(
-        127deg,
-        $color-accent 22%,
-        $color-primary 100%
-      );
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -85,6 +57,85 @@
       display: flex;
       align-items: center;
       gap: 4px;
+    }
+  }
+
+  .hero-info-wrapper {
+    p {
+      font-size: $text-medium;
+      font-weight: 400;
+      margin-bottom: rem(40);
+      margin-top: 6px;
+    }
+
+    li {
+      margin: 12px 0;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  .hero-title {
+    display: flex;
+    width: 100%;
+
+    h1,
+    span {
+      font-size: rem(48);
+      line-height: rem(30);
+    }
+
+    h1 {
+      line-height: rem(48);
+      width: rem(280);
+      font-family: var(--font-fugaz-one);
+      background: linear-gradient(
+        127deg,
+        $color-accent 22%,
+        $color-primary 100%
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-small) {
+  .hero-section {
+    margin: rem(50) 0;
+
+    .card-image {
+      width: rem(250);
+      height: rem(248);
+    }
+
+    .hero-wrapper {
+      grid-template-columns: 35% auto;
+      grid-template-rows: unset;
+      gap: rem(80);
+    }
+
+    .hero-title {
+      h1,
+      span {
+        font-size: rem(84);
+        line-height: rem(52);
+      }
+
+      h1 {
+        line-height: rem(84);
+        width: rem(500);
+      }
+    }
+
+    .hero-info-wrapper {
+      p {
+        font-size: $text-large;
+        margin-bottom: rem(40);
+      }
     }
   }
 }

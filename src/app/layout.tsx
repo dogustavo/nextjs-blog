@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 import { Work_Sans, Fugaz_One } from 'next/font/google'
 import './globals.scss'
 import { cookies } from 'next/headers'
-import { Navigator, Footer } from 'common'
+import { Navigator, Footer, Overlay } from 'common'
 
 import ThemeProvider from 'provider/theme'
+import OverlayProvider from 'provider/overlay'
 
 const fugaz_one = Fugaz_One({
   subsets: ['latin'],
@@ -36,11 +37,15 @@ export default function RootLayout({
       className={`${work_sans.variable} ${fugaz_one.variable}`}
     >
       <ThemeProvider cookieTheme={theme}>
-        <body data-theme={theme}>
-          <Navigator />
-          {children}
-          <Footer />
-        </body>
+        <OverlayProvider>
+          <body data-theme={theme}>
+            <Navigator />
+            {children}
+            <Footer />
+
+            <Overlay />
+          </body>
+        </OverlayProvider>
       </ThemeProvider>
     </html>
   )

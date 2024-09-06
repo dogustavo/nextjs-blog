@@ -61,12 +61,16 @@ export default function Hero() {
       <Container>
         <div className={styled['hero-wrapper']}>
           <div className={styled.card}>
-            <Image
-              src="/static/me.png"
-              alt="Minha foto de perfil"
-              width={250}
-              height={240}
-            />
+            <div className={styled['card-image']}>
+              <Image
+                src="/static/me.png"
+                alt="Minha foto de perfil"
+                // width={250}
+                // height={240}
+                sizes="100%"
+                fill
+              />
+            </div>
 
             <div className={styled['card-info']}>
               <p>Gustavo Oliveira</p>
@@ -91,7 +95,6 @@ export default function Hero() {
             </div>
             <p>
               I’m Gustavo Oliveira, a passionate frontend developer
-              <br />
               crafting web experiences.
             </p>
 
