@@ -14,7 +14,7 @@ const fugaz_one = Fugaz_One({
 
 const work_sans = Work_Sans({
   subsets: ['latin'],
-  weight: ['300', '500', '700'],
+  weight: ['300', '400', '500', '700'],
   variable: '--font-work-sans'
 })
 
@@ -39,7 +39,6 @@ export default function RootLayout({
         <body data-theme={theme}>
           <Navigator />
           {children}
-
           <Footer />
         </body>
       </ThemeProvider>
