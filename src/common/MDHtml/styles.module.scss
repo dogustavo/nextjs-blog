@@ -1,5 +1,5 @@
 .md-blog-section {
-  color: var(--color-text);
+  color: $color-text;
 
   h2,
   h3 {
@@ -39,16 +39,21 @@
   }
 
   a {
-    color: #0366d6;
-    text-decoration: none;
+    color: $color-text;
+    text-decoration: underline;
 
     &:hover {
-      text-decoration: underline;
+      color: $color-primary;
     }
   }
 
   code {
-    color: var(--color-primary);
+    padding: 0 0.2em;
+    font-size: inherit;
+    background-color: rgb(235 236 240);
+    color: $color-accent;
+    border-radius: 6px;
+    margin: 0;
   }
 
   pre {
@@ -76,7 +81,7 @@
 
     .hljs-name,
     .hljs-keyword {
-      color: var(--color-primary);
+      color: #f9215d;
     }
 
     .hljs-attr,
@@ -90,9 +95,9 @@
   }
 
   blockquote {
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid $color-primary;
     padding: 0.5rem 1rem;
-    color: var(--color-text);
+    color: $color-text;
     margin: 0;
   }
 
@@ -103,13 +108,13 @@
 
     th,
     td {
-      border: 1px solid var(--color-text);
+      border: 1px solid $color-text;
       padding: 6px 13px;
     }
 
     th {
-      background-color: var(--color-secondary);
-      color: var(--color-background);
+      background-color: $color-secondary;
+      color: $color-text;
       font-weight: bold;
     }
   }

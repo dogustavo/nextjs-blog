@@ -10,23 +10,23 @@
     margin-bottom: rem(20);
 
     a {
-      color: var(--color-primary);
+      color: $color-primary;
       font-style: italic;
     }
   }
 
   h1 {
-    color: var(--color-text);
+    color: $color-text;
     font-size: $title-large;
   }
 
   .created-at,
   .sumary-wrapper {
-    color: var(--color-text);
+    color: $color-text;
   }
 
   .created-by {
-    color: var(--color-primary);
+    color: $color-primary;
   }
 
   .created-at {

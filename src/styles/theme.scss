@@ -1,17 +1,33 @@
+// $themes: (
+//   light: (
+//     text: #16151e,
+//     background: #e2e1ea,
+//     primary: #e00644,
+//     secondary: #0f1199,
+//     accent: #3d309c
+//   ),
+//   dark: (
+//     text: #e2e1ea,
+//     background: #17161f,
+//     primary: #f9215d,
+//     secondary: #6669f0,
+//     accent: #6f62cf
+//   )
+// );
 $themes: (
   light: (
-    text: #16151e,
-    background: #e2e1ea,
-    primary: #e00644,
-    secondary: #0f1199,
-    accent: #3d309c
+    text: #00101a,
+    background: #f6f8f9,
+    primary: #026597,
+    secondary: #536dfd,
+    accent: #0f02ca
   ),
   dark: (
-    text: #e2e1ea,
-    background: #17161f,
-    primary: #f9215d,
-    secondary: #6669f0,
-    accent: #6f62cf
+    text: #e5f5ff,
+    background: #07090a,
+    primary: #68cbfd,
+    secondary: #021cad,
+    accent: #4133fd
   )
 );
 

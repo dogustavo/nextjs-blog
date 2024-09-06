@@ -1,14 +1,8 @@
-$color-light-text: #16151e;
-$color-light-background: #e2e1ea;
-$color-light-primary: #e00644;
-$color-light-secondary: #0f1199;
-$color-light-accent: #3d309c;
-
-$color-dark-text: #e2e1ea;
-$color-dark-background: #17161f;
-$color-dark-primary: #f9215d;
-$color-dark-secondary: #6669f0;
-$color-dark-accent: #6f62cf;
+$color-primary: var(--color-primary);
+$color-text: var(--color-text);
+$color-background: var(--color-background);
+$color-secondary: var(--color-secondary);
+$color-accent: var(--color-accent);
 
 //fonts
 $title-small: 18px;
