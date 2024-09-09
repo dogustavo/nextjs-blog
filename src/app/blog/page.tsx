@@ -1,7 +1,11 @@
+import { Breadcrumb, Container } from 'common'
+
+import Posts from './components/Posts'
+import Filter from './components/Filter'
+
+import styled from './styles.module.scss'
+
 import { getAllPosts } from 'services'
-
-import Posts from './components/posts'
-
 interface IPage {
   searchParams: { [key: string]: any | null | undefined }
 }
@@ -20,8 +24,27 @@ export default async function Blog({ searchParams }: IPage) {
   if ('hasError' in posts) return ''
 
   return (
-    <main>
-      <Posts posts={posts.data} />
+    <main className={styled['post-page']}>
+      <Container>
+        <div className={styled['main-post-wrapper']}>
+          <Filter />
+          <div className={styled['post-side']}>
+            <Breadcrumb
+              breadcrumbs={[
+                {
+                  path: '/',
+                  name: 'Home'
+                },
+                {
+                  path: '/blog',
+                  name: 'Blog'
+                }
+              ]}
+            />
+            <Posts posts={posts.data} />
+          </div>
+        </div>
+      </Container>
     </main>
   )
 }

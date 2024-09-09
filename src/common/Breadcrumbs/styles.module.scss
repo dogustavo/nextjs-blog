@@ -10,6 +10,7 @@
       &::before {
         content: '/';
         margin: 0 8px;
+
         color: $color-text;
       }
     }
@@ -21,13 +22,13 @@
     font-style: normal;
     line-height: 1rem;
     font-weight: 400;
-    color: $color-text;
+    color: $color-primary;
     text-wrap: nowrap;
   }
 
   span {
     font-weight: 500;
-    color: $color-primary;
+    color: $color-text;
   }
 
   span {

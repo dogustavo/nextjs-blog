@@ -2,7 +2,7 @@ import { fetcher } from 'services'
 
 import { IPosts, IPostItem } from 'types/blog'
 
-export interface IErrorHandler {
+interface IErrorHandler {
   hasError: boolean
 }
 

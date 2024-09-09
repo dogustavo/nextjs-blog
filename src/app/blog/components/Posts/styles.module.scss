@@ -1,6 +1,4 @@
 .post-section {
-  margin: rem(45) 0;
-
   .post-cards {
     display: flex;
     flex-direction: column;
@@ -62,8 +60,6 @@
 }
 @media (min-width: $breakpoint-small) {
   .post-section {
-    margin: rem(75) 0;
-
     .post-card-item {
       padding: rem(25);
     }

@@ -45,13 +45,11 @@ const PostItem = ({ post }: { post: IPostData }) => (
 export default function PostsList({ posts }: IPost) {
   return (
     <section className={styled['post-section']}>
-      <Container>
-        <div className={styled['post-cards']}>
-          {posts.map((post) => (
-            <PostItem key={post.id} post={post} />
-          ))}
-        </div>
-      </Container>
+      <div className={styled['post-cards']}>
+        {posts.map((post) => (
+          <PostItem key={post.id} post={post} />
+        ))}
+      </div>
     </section>
   )
 }

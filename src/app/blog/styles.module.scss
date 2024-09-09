@@ -1,0 +1,26 @@
+.post-page {
+  margin: rem(20) 0;
+
+  .main-post-wrapper {
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: auto auto;
+    gap: 5px;
+    position: relative;
+  }
+
+  .post-side {
+    padding: rem(24) 0;
+  }
+}
+@media (min-width: $breakpoint-small) {
+  .post-page {
+    margin: rem(55) 0;
+
+    .main-post-wrapper {
+      grid-template-columns: 15% auto;
+      grid-template-rows: unset;
+      gap: rem(32);
+    }
+  }
+}
