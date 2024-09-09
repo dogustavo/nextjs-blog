@@ -3,6 +3,8 @@ import { ITag } from 'types/tag'
 
 import styled from './styles.module.scss'
 
+import { formattedDate } from 'utils/dateFormatter'
+
 interface IBlogInfo {
   postInfo: {
     createdAt: string
@@ -23,15 +25,6 @@ const TagLink = ({ tag }: { tag: ITag }) => (
     #{tag.attributes.tag}
   </Link>
 )
-
-const formattedDate = (data: Date) =>
-  data
-    .toLocaleDateString('pt-BR', {
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric'
-    })
-    .replace(/de /g, '')
 
 export default async function BlogHeader({
   tags,

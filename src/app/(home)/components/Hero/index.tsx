@@ -51,7 +51,7 @@ const SocialLink = ({
       className={styled['social-item']}
     >
       <SvgIcon />
-      <span className="sr-only">{label}</span>
+      <span>{label}</span>
     </Link>
   )
 }
@@ -65,8 +65,6 @@ export default function Hero() {
               <Image
                 src="/static/me.png"
                 alt="Minha foto de perfil"
-                // width={250}
-                // height={240}
                 sizes="100%"
                 fill
               />

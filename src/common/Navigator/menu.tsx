@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { ThemeContext } from 'context/theme'
-import { OverlayContext } from 'context/overlay'
+import { Overlay } from 'common'
 
 import styled from './styles.module.scss'
 
@@ -78,7 +78,7 @@ export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const { toogleTheme, theme } = useContext(ThemeContext)
-  const { setIsOverlayOpen } = useContext(OverlayContext)
+  // const { setIsOverlayOpen } = useContext(OverlayContext)
 
   const checkActivePage = (page: string): boolean => {
     const path = pathname?.split('/')[1]
@@ -91,12 +91,10 @@ export default function Menu() {
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState)
-    setIsOverlayOpen(!isMenuOpen)
   }
 
   useEffect(() => {
     setIsMenuOpen(false)
-    setIsOverlayOpen(false)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname])
 
@@ -134,6 +132,8 @@ export default function Menu() {
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={toggleMenu}
       />
+
+      <Overlay isOpen={isMenuOpen} setIsOverlayOpen={setIsMenuOpen} />
     </div>
   )
 }

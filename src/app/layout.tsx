@@ -5,7 +5,6 @@ import { cookies } from 'next/headers'
 import { Navigator, Footer, Overlay } from 'common'
 
 import ThemeProvider from 'provider/theme'
-import OverlayProvider from 'provider/overlay'
 
 const fugaz_one = Fugaz_One({
   subsets: ['latin'],
@@ -37,15 +36,11 @@ export default function RootLayout({
       className={`${work_sans.variable} ${fugaz_one.variable}`}
     >
       <ThemeProvider cookieTheme={theme}>
-        <OverlayProvider>
-          <body data-theme={theme}>
-            <Navigator />
-            {children}
-            <Footer />
-
-            <Overlay />
-          </body>
-        </OverlayProvider>
+        <body data-theme={theme}>
+          <Navigator />
+          {children}
+          <Footer />
+        </body>
       </ThemeProvider>
     </html>
   )

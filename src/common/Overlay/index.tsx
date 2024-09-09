@@ -1,17 +1,22 @@
 'use client'
 
-import { useContext } from 'react'
 import styled from './styles.module.scss'
-import { OverlayContext } from 'context/overlay'
 
-export default function Overlay() {
-  const { isOpen, setIsOverlayOpen } = useContext(OverlayContext)
+interface IOverlay {
+  isOpen: boolean
+  setIsOverlayOpen: (prop: boolean) => void
+}
+
+export default function Overlay({
+  isOpen,
+  setIsOverlayOpen
+}: IOverlay) {
   return (
     <div
       className={`${styled.overlay} ${
         isOpen ? styled['is-open'] : ''
       }`}
-      // onClick={() => setIsOverlayOpen(false)}
+      onClick={() => setIsOverlayOpen(false)}
     />
   )
 }

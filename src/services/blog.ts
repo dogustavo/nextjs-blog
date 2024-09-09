@@ -1,9 +1,32 @@
 import { fetcher } from 'services'
 
-import { IPostData, IPostItem } from 'types/blog'
+import { IPosts, IPostItem } from 'types/blog'
 
 export interface IErrorHandler {
   hasError: boolean
+}
+
+export interface IPostsProp {
+  filter?: any
+}
+
+export async function getAllPosts({
+  filter
+}: IPostsProp): Promise<IPosts | IErrorHandler> {
+  try {
+    const strFilter = formatQueryString(filter)
+    console.log('filters 25:  ', strFilter)
+
+    const res = await fetcher<IPosts>(`/posts?${strFilter}`, {
+      method: 'GET'
+    })
+
+    return res
+  } catch (error) {
+    return {
+      hasError: true
+    }
+  }
 }
 
 export async function getPostById({
@@ -22,4 +45,15 @@ export async function getPostById({
       hasError: true
     }
   }
+}
+
+export function formatQueryString(filters: {
+  [key: string]: any
+}): string {
+  if (!filters) {
+    return ''
+  }
+  return Object.keys(filters)
+    .map((key) => `${key}=${encodeURIComponent(filters[key])}`)
+    .join('&')
 }
