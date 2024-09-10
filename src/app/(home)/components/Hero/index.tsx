@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Container } from 'common'
-import { GitSvg, InstaSvg, LinkedinSvg } from 'common/SVG/icons'
+import { GitSvg, InstaSvg, LinkedinSvg } from 'common/SVG'
 
 import styled from './styles.module.scss'
 

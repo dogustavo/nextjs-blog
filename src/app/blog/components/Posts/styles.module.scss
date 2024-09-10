@@ -39,12 +39,17 @@
     display: flex;
     align-items: center;
     gap: rem(15);
-    margin-bottom: rem(20);
+    margin-bottom: 12px;
 
     a {
       color: $color-primary;
       font-style: italic;
     }
+  }
+
+  .created-by {
+    color: $color-text;
+    margin-bottom: rem(20);
   }
 
   .read-more {

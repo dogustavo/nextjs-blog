@@ -1,4 +1,4 @@
-import { Breadcrumb, Container } from 'common'
+import { Breadcrumb, Container, Pagination } from 'common'
 
 import Posts from './components/Posts'
 import Filter from './components/Filter'
@@ -15,7 +15,7 @@ export default async function Blog({ searchParams }: IPage) {
     filter: {
       'pagination[page]': searchParams['pagination[page]'] || 1,
       'pagination[pageSize]':
-        searchParams['pagination[pageSize]'] || 10,
+        searchParams['pagination[pageSize]'] || 15,
       populate: '*',
       ...searchParams
     }
@@ -42,6 +42,10 @@ export default async function Blog({ searchParams }: IPage) {
               ]}
             />
             <Posts posts={posts.data} />
+            <Pagination
+              searchParams={searchParams}
+              pagination={posts.meta.pagination}
+            />
           </div>
         </div>
       </Container>

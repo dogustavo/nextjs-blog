@@ -7,7 +7,7 @@ import { ITag } from 'types/tag'
 import styled from './styles.module.scss'
 import { useEffect, useState } from 'react'
 
-import { ArrowSvg } from 'common/SVG/icons'
+import { ArrowSvg } from 'common/SVG'
 
 interface IFilter {
   tags: ITag[]

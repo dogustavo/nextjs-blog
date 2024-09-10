@@ -28,9 +28,9 @@ const PostItem = ({ post }: { post: IPostData }) => (
         <TagLink tag={tag} key={tag.id} />
       ))}
     </div>
-    <p>
-      {formattedDate(new Date(post.attributes.createdAt))} por{' '}
-      <span>{post.attributes.createdBy}</span>
+
+    <p className={styled['created-by']}>
+      {formattedDate(new Date(post.attributes.createdAt))}
     </p>
 
     <p className={styled['post-summary']}>
