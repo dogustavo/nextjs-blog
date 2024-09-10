@@ -28,7 +28,7 @@ const menuItems = [
   {
     label: 'About',
     slug: 'about',
-    link: '/about'
+    link: '/sobre-mim'
   }
 ]
 

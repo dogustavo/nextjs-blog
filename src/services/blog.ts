@@ -47,3 +47,23 @@ export async function getPostById({
     }
   }
 }
+
+interface ITeste {
+  id: number
+}
+
+export async function getAllSitemapPosts(): Promise<
+  ITeste[] | IErrorHandler
+> {
+  try {
+    const res = await fetcher<ITeste[]>(`/posts-report`, {
+      method: 'GET'
+    })
+
+    return res
+  } catch (error) {
+    return {
+      hasError: true
+    }
+  }
+}

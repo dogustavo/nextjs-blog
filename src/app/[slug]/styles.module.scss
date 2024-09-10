@@ -1,0 +1,9 @@
+.pages-content {
+  margin: rem(20) 0;
+}
+
+@media (min-width: $breakpoint-small) {
+  .pages-content {
+    margin: rem(55) 0;
+  }
+}

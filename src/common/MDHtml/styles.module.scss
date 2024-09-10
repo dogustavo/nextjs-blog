@@ -1,14 +1,19 @@
 .md-blog-section {
   color: $color-text;
 
+  h1 {
+    font-size: rem(28);
+    margin: rem(24) 0;
+  }
+
   h2,
   h3 {
-    font-size: rem(24);
+    font-size: $title-medium;
     margin: rem(24) 0;
   }
 
   h3 {
-    font-size: rem(18);
+    font-size: $title-small;
     margin: rem(14) 0;
   }
 

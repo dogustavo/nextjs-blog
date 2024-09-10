@@ -1,5 +1,6 @@
 export * from './blog'
 export * from './tag'
+export * from './pages'
 
 export async function fetcher<T = any>(
   input: RequestInfo,
