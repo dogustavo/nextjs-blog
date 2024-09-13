@@ -24,7 +24,7 @@ export default async function Blog({ searchParams }: IPage) {
   if ('hasError' in posts) return ''
 
   return (
-    <main className={styled['post-page']}>
+    <div className={styled['post-page']}>
       <Container>
         <div className={styled['main-post-wrapper']}>
           <Filter />
@@ -49,6 +49,6 @@ export default async function Blog({ searchParams }: IPage) {
           </div>
         </div>
       </Container>
-    </main>
+    </div>
   )
 }

@@ -19,29 +19,27 @@ export default async function BlogItem({
   const { tags, post, ...rest } = data.data.attributes
 
   return (
-    <main>
-      <article className={styled['blog-container']}>
-        <Container>
-          <Breadcrumb
-            breadcrumbs={[
-              {
-                path: '/',
-                name: 'Home'
-              },
-              {
-                path: '/blog',
-                name: 'Blog'
-              },
-              {
-                path: `/blog/${params.id}`,
-                name: rest.title
-              }
-            ]}
-          />
-          <BlogHeader tags={tags.data} postInfo={rest} />
-          <MDHtml content={post} />
-        </Container>
-      </article>
-    </main>
+    <article className={styled['blog-container']}>
+      <Container>
+        <Breadcrumb
+          breadcrumbs={[
+            {
+              path: '/',
+              name: 'Home'
+            },
+            {
+              path: '/blog',
+              name: 'Blog'
+            },
+            {
+              path: `/blog/${params.id}`,
+              name: rest.title
+            }
+          ]}
+        />
+        <BlogHeader tags={tags.data} postInfo={rest} />
+        <MDHtml content={post} />
+      </Container>
+    </article>
   )
 }

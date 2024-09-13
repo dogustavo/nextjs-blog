@@ -1,5 +1,8 @@
-import Link from 'next/link'
+'use client'
+import { motion } from 'framer-motion'
+
 import styled from './styles.module.scss'
+import CustomLink from 'common/Link'
 
 type IBreadcrumbProp = {
   breadcrumbs: {
@@ -10,16 +13,26 @@ type IBreadcrumbProp = {
 
 export default function Breadcrumb({ breadcrumbs }: IBreadcrumbProp) {
   return (
-    <ul className={styled.breadcrumb}>
+    <motion.ul
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          delay: 0.4,
+          ease: 'easeInOut'
+        }
+      }}
+      className={styled.breadcrumb}
+    >
       {breadcrumbs.map(({ name, path }, key) => (
         <li key={key}>
           {key + 1 === breadcrumbs.length ? (
             <span>{name}</span>
           ) : (
-            <Link href={path}>{name}</Link>
+            <CustomLink href={path}>{name}</CustomLink>
           )}
         </li>
       ))}
-    </ul>
+    </motion.ul>
   )
 }

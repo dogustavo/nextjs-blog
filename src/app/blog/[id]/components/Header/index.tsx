@@ -1,8 +1,7 @@
-import Link from 'next/link'
 import { ITag } from 'types/tag'
 
 import styled from './styles.module.scss'
-
+import { CustomLink } from 'common'
 import { formattedDate } from 'utils/dateFormatter'
 
 interface IBlogInfo {
@@ -18,12 +17,12 @@ interface IBlogInfo {
 }
 
 const TagLink = ({ tag }: { tag: ITag }) => (
-  <Link
+  <CustomLink
     key={tag.id}
     href={`/blog?tag=${tag.attributes.tag.toLowerCase()}`}
   >
     #{tag.attributes.tag}
-  </Link>
+  </CustomLink>
 )
 
 export default async function BlogHeader({

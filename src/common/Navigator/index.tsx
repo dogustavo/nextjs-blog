@@ -1,4 +1,4 @@
-import { Logo, Container } from 'common'
+import { Logo, Container, CustomLink } from 'common'
 import Menu from './menu'
 
 import styled from './styles.module.scss'
@@ -9,9 +9,9 @@ export default function Navigator() {
     <nav className={styled['nav-wrapper']}>
       <Container>
         <div className={styled['nav-container']}>
-          <Link href="/">
+          <CustomLink href="/">
             <Logo />
-          </Link>
+          </CustomLink>
           <Menu />
         </div>
       </Container>

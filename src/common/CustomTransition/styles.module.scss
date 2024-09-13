@@ -1,0 +1,17 @@
+.transition-wrapper {
+  height: 100dvh;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+
+  .slide-out {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: $color-accent;
+  }
+}

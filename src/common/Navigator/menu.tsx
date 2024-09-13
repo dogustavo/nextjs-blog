@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { ThemeContext } from 'context/theme'
-import { Overlay } from 'common'
+import { Overlay, CustomLink } from 'common'
 
 import styled from './styles.module.scss'
 
@@ -62,7 +62,7 @@ const MenuItem = ({
   link: string
   isActive: boolean
 }) => (
-  <Link
+  <CustomLink
     key={label.toLocaleLowerCase()}
     className={`${styled['menu-item']} ${
       isActive ? styled['active-page'] : ''
@@ -70,7 +70,7 @@ const MenuItem = ({
     href={link}
   >
     {label}
-  </Link>
+  </CustomLink>
 )
 
 export default function Menu() {

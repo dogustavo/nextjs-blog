@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { Work_Sans, Fugaz_One } from 'next/font/google'
 import './globals.scss'
 import { cookies } from 'next/headers'
-import { Navigator, Footer, Overlay } from 'common'
-
+import { Navigator, Footer } from 'common'
+import NextTopLoader from 'nextjs-toploader'
+import { AnimatePresence } from 'framer-motion'
 import ThemeProvider from 'provider/theme'
 
 const fugaz_one = Fugaz_One({
@@ -37,8 +38,15 @@ export default function RootLayout({
     >
       <ThemeProvider cookieTheme={theme}>
         <body data-theme={theme}>
+          <NextTopLoader
+            color="var(--color-accent)"
+            initialPosition={0.08}
+            height={3}
+            zIndex={8}
+            showSpinner={false}
+          />
           <Navigator />
-          {children}
+          <AnimatePresence mode="wait">{children}</AnimatePresence>
           <Footer />
         </body>
       </ThemeProvider>

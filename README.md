@@ -1,5 +1,7 @@
 # Blog Pessoal - Frontend
 
+<img width=450 style="border-radius: 5px" height="auto" alt="Home Light" title="Light Mode" src="public/static/home.gif" />
+
 Este repositório contém o código do frontend para o meu blog pessoal, desenvolvido com Next.js, React, SCSS e TypeScript. Para conhecer o CMS que está servindo os dados para a contrução do blog basta acessar [aqui](https://github.com/dogustavo/strapi-v4-blog).
 
 ## Tecnologias Utilizadas

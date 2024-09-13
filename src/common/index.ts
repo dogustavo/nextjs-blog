@@ -7,6 +7,8 @@ import Breadcrumb from './Breadcrumbs'
 
 import Footer from './Footer'
 import Overlay from './Overlay'
+import CustomLink from './Link'
+import CustomTransition from './CustomTransition'
 
 export {
   MDHtml,
@@ -16,5 +18,7 @@ export {
   Footer,
   Breadcrumb,
   Overlay,
-  Pagination
+  Pagination,
+  CustomLink,
+  CustomTransition
 }
