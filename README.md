@@ -1,6 +1,6 @@
 # Blog Pessoal - Frontend
 
-<img width=450 style="border-radius: 5px" height="auto" alt="Home Light" title="Light Mode" src="public/static/home.gif" />
+<img width="100%" style="border-radius: 5px" height="auto" alt="Home Light" title="Light Mode" src="public/static/home.gif" />
 
 Este repositório contém o código do frontend para o meu blog pessoal, desenvolvido com Next.js, React, SCSS e TypeScript. Para conhecer o CMS que está servindo os dados para a contrução do blog basta acessar [aqui](https://github.com/dogustavo/strapi-v4-blog).
 
@@ -46,3 +46,42 @@ npm run dev
 # or
 yarn dev
 ```
+
+### Telas do sistema
+
+<div align="center">
+<table>
+  <tr>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Light" title="Light Mode" src="public/static/desk-home-dark.png" /> 
+      </td>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Dark" title="Dark Mode" src="public/static/desk-home-light.png" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Light" title="Home" src="public/static/mob-home-dark.png" /> 
+      </td>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Dark" title="Level Up" src="public/static/mob-home-light.png" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Light" title="Home" src="public/static/mob-menu-dark.png" /> 
+      </td>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Dark" title="Level Up" src="public/static/mob-menu-light.png" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Light" title="Home" src="public/static/blog-list.png" /> 
+      </td>
+    <td>
+      <img width=450 style="border-radius: 5px" height="auto" alt="Home Dark" title="Level Up" src="public/static/blog-item.png" />
+    </td>
+  </tr>
+ </table>
+</div>
